@@ -1,0 +1,312 @@
+.page{
+  display: block;
+  font-family: 'Monserrat';
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/*Header*/
+.header{
+  width: 100vw;
+  height: 10%;
+  position:  fixed;
+  background: #252525;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d5d5d3;
+  z-index: 10;
+  opacity: .8;
+}
+
+.header_logo{
+  font-size: 1.8vw;
+  font-weight: 700;
+  padding-left: 10%;
+  color: #d5d5d3;  
+}
+
+/*Navigation*/
+.nav{
+  font-size: .8vw;
+  text-transform: uppercase;   
+  padding-right: 5%;
+      
+}
+
+.nav_link{
+  
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1.5vw;
+  position: relative;
+  right: 3%;
+  color: #d5d5d3;
+  text-decoration: none;
+  transition: color .2s linear;
+  
+}
+
+.nav_link:after{
+  
+  content: "";
+  display: block;
+  width: 100%;
+  height: .3%;
+  background-color: #fdd947;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: opacity .2s linear;
+  
+}
+
+.nav_link:hover{
+  
+  color: #fdd947;
+  
+  
+}
+
+.nav_link:hover:after,
+.nav_link.active:after{
+  
+  opacity: 1;
+  
+}
+
+/*body*/
+.body{
+  margin: 0;
+  display: block;
+}
+
+/*cart*/
+.sp_cart{
+  width: 100vw;
+  height: auto;
+  position: relative;
+  background-color: #d5d5d3;
+  padding-bottom: 5vw;
+}
+
+.cart_grid{
+  width: 80vw;
+  padding-top: 6vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: grid;
+  grid-template-columns: repeat(4, 15vw);
+  grid-template-rows: repeat(2, 28vw);
+  grid-column-gap: 5vw;
+  grid-row-gap: 2vw;
+}
+
+/*product*/
+.product{
+  border-radius: 3%;
+  overflow: hidden;
+}
+
+.prod_images{
+  width: 15vw;
+  height: 15vw;
+  border-radius: 6%; 
+}
+
+.prod_dopinfo{
+  transform: translateX(16vw) translateY(-24vw);
+
+}
+
+.prod_dopinfo > p{
+  margin: 0;
+
+  text-align: justify;
+  width: 40%;
+  height: 0vw;
+  opacity: 0;
+  line-height: 1;
+  font-family: 'Roboto';
+  font-size: 1.2vw;
+  font-weight: bolder;
+}
+
+.prod_dopinfo > p > a{
+  margin: 0;
+  text-decoration: none;
+}
+
+.prod_info{
+  margin: 0;
+  line-height: 1.1;
+  font-family: 'Roboto';
+  width: 15vw;
+  height: 5vw;
+  font-size: 1.2vw;
+  font-weight: bolder;
+}
+
+.prod_info > h3{
+  margin: 0;
+}
+
+.prod_but{
+  padding: 0;
+  margin: 0vw 0vw 0vw 1.5vw;
+  border-radius: 1vw;
+  border: 0;
+  width: 12vw;
+  height: 3vw;
+}
+
+.prod_but:hover{
+  background-color: #d5d5d3;  
+}
+
+.prod_but:active{
+  background-color: #38b038;  
+}
+
+.product:hover{
+  width: 30vw;
+  z-index: 1;
+  background-color: #b3b3b3 ;
+  transition: all 0.3s;
+  
+}
+
+.product:hover .prod_dopinfo > p{
+  opacity: 1;
+}
+
+.product:hover:after,
+.product.active:after{
+  
+  opacity: 1;
+  
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.cont_btn{
+  display: inline-block;
+  width: 100%;
+  height: 2vw;
+}
+
+.plus_btn{
+  width: 1vw;
+  height: 1vw;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+.plus_btn:hover{
+  background-color: #d5d5d3;  
+}
+
+.minus_btn{
+  padding: 0;
+  border: 0;
+  text-align: center;
+  margin-left: 4.5vw;
+  width: 1vw;
+  height: 1vw;
+}
+
+.minus_btn:hover{
+  background-color: #d5d5d3;  
+}
+
+.inp{
+  width: 3vw;
+  height: 1vw;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  outline: none;
+}
+
+/* footer */
+
+.footer{
+  height: 7vw;
+  background: #252525;
+  opacity: .8;
+  position: relative;
+}
+
+/* Social links */
+.social_text{
+  display: flex; 
+  font-family: 'Monserrat';
+  font-size: 20px;
+  line-height: 1.6;
+
+  padding-left: 10vw;
+  color: #fff;
+  
+}
+
+.social_icons {
+  display: flex;    
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: .25vh;
+  padding-left: 10vw;
+  
+}
+.social_icons>li {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.social_icons a {
+  position: relative;
+  background-color: #eee;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color .3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .25rem;
+}
+.social_icons a:hover {
+  background-color: #e0e0e0;
+}
+.social_icons a::before {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  left: .65rem;
+  top: .65rem;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.social_icons .social_icon_vk::before {
+  background-image: url("images/VK_Compact_Logo.png");
+}
+
+.social_icons .social_icon_inst::before {
+  background-image: url("images/1024px-Instagram_icon.png");
+}
+
+
+
+
